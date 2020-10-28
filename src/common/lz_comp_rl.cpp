@@ -64,7 +64,7 @@ static uchar xor_mask[] = {
 // };
 
 struct Xor_Key {
-  char key[16];
+  uchar key[16];
   int offset;
   int length;
 };
@@ -127,8 +127,7 @@ Xor_Key FIVE_key[] = {
 Xor_Key SNOW_key[] = {
     { { 0xe4, 0xab, 0xa2, 0xc9, 0xec, 0x39, 0x36, 0x62,
         0xc9, 0x03, 0xba, 0x6d, 0x2e, 0x9c, 0xf2, 0x64 }, 256, 257 },
-    { { 0x0 }, 0, 0 }
-};
+    { { 0x0 }, 0, 0 }};
 
 Xor_Key* keys[] = {
     CFV_key, LB_key, LBEX_key, FIVE_key, SNOW_key

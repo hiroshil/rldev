@@ -70,13 +70,13 @@ value rldev_get_interpreter_version (value filename)
 #include <string.h>
 #include <inttypes.h>
 
-inline uint32_t get_i16 (FILE* f)
+uint32_t get_i16 (FILE* f)
 {
     uint32_t c = getc (f);
     return c | (getc (f) << 8);
 }
 
-inline uint32_t get_int (FILE* f)
+uint32_t get_int (FILE* f)
 {
     uint32_t c = getc (f);
     c |= getc (f) << 8;
